@@ -59,6 +59,9 @@ import UserAsideInfo from "@/components/UserComponents/UserAsideInfo";
 import UserFollowingCard from "@/components/UserComponents/UserFollowingCard";
 import UserListCard from "@/components/UserComponents/UserListCard";
 import UserMain from "@/components/UserComponents/UserMain";
+import UserMainAbout from "@/components/UserComponents/UserMainAbout";
+import UserMainAboutBio from "@/components/UserComponents/UserMainAboutBio";
+import UserMainAboutEmailSubscribe from "@/components/UserComponents/UserMainAboutEmailSubscribe";
 import UserMainHeader from "@/components/UserComponents/UserMainHeader";
 import UserMainNavigation from "@/components/UserComponents/UserMainNavigation";
 import UserMainNews from "@/components/UserComponents/UserMainNews";
@@ -81,5 +84,5 @@ export {
     NewsNavigation, NewsNavigationItem,
     NewsArticle, NewsArticleControl, NewsFigCaptionBlock, NewsHeadingBlock, NewsListItemBlock, NewsParagraphBlock, NewsQuoteBlock, SmallNewsScaffold, SmallNewsScaffoldContent,
     Providers,
-    UserAside, UserAsideInfo, UserFollowingCard, UserListCard, UserMain, UserMainHeader, UserMainNavigation, UserMainNews, UserNewsArticle, UserNewsHighlight, UserProfileCard,
+    UserAside, UserAsideInfo, UserFollowingCard, UserListCard, UserMain, UserMainAbout, UserMainAboutBio, UserMainAboutEmailSubscribe, UserMainHeader, UserMainNavigation, UserMainNews, UserNewsArticle, UserNewsHighlight, UserProfileCard,
 }

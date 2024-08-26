@@ -1,6 +1,6 @@
 const fetchTokenRefresh = async () => {
     try {
-        const refreshToken = localStorage.getItem("refreshToken");
+        const remember_token = localStorage.getItem("remember_token");
 
         const url = process.env.NEXT_PUBLIC_API_URL + "/api/v1/auth/refresh-tokens";
 
@@ -8,7 +8,7 @@ const fetchTokenRefresh = async () => {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": `Bearer ${refreshToken}`,
+                "Authorization": `Bearer ${remember_token}`,
             },
         });
 

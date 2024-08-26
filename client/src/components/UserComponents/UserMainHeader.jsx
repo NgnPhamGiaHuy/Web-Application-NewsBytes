@@ -2,7 +2,7 @@ import { IoEllipsisHorizontalSharp } from "react-icons/io5";
 
 import { IconActionButton, UserMainNavigation } from "@/components";
 
-const UserMainHeader = ({ firstname, lastname, }) => {
+const UserMainHeader = ({ id, firstname, lastname, }) => {
     return (
         <div>
             <div>
@@ -21,7 +21,7 @@ const UserMainHeader = ({ firstname, lastname, }) => {
                                     <IconActionButton icon={<IoEllipsisHorizontalSharp size={25}/>} buttonStyle={{marginLeft: "12px", padding: 0}} iconStyle={{width: "33px", height: "33px", padding: "4px"}}/>
                                 </div>
                             </div>
-                            <UserMainNavigation/>
+                            <UserMainNavigation id={id}/>
                         </div>
                     </div>
                 </div>

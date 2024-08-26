@@ -29,11 +29,11 @@ const useTokenRefresh = () => {
     const checkTokenExpiration = useCallback(async () => {
         try {
             const accessToken = localStorage.getItem("accessToken");
-            const refreshToken = localStorage.getItem("refreshToken");
+            const remember_token = localStorage.getItem("remember_token");
 
             const currentPath = window.location.pathname;
 
-            if ((!accessToken && !refreshToken) && currentPath !== "/auth") {
+            if ((!accessToken && !remember_token) && currentPath !== "/auth") {
                 return router.push("/auth");
             }
 
@@ -41,7 +41,7 @@ const useTokenRefresh = () => {
                 return ;
             }
 
-            const token = accessToken || refreshToken;
+            const token = accessToken || remember_token;
             const decodedToken = jwtDecode(token);
 
             const currentTime = Date.now() / 1000;

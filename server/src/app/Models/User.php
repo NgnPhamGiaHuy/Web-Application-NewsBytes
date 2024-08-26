@@ -35,7 +35,7 @@ class User extends Authenticatable implements JWTSubject
 
     protected $hidden = [
         'password',
-        'remember_token',
+        'remember_token', // This field is necessary for Laravel's "remember me" functionality.
     ];
 
     protected function casts(): array

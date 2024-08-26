@@ -30,7 +30,7 @@ class UserService
 
         return [
             'accessToken' => $accessToken,
-            'refreshToken' => $refreshToken,
+            'remember_token' => $refreshToken,
         ];
     }
 
@@ -44,7 +44,7 @@ class UserService
 
         return [
             'accessToken' => $accessToken,
-            'refreshToken' => $refreshToken,
+            'remember_token' => $refreshToken,
         ];
     }
 
@@ -58,7 +58,7 @@ class UserService
 
     public function refreshAccessToken($refreshToken)
     {
-        $user = User::where('refreshToken', $refreshToken)->first();
+        $user = User::where('remember_token', $refreshToken)->first();
 
         if (!$user) {
             return null;

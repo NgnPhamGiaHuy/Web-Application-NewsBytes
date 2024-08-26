@@ -42,7 +42,7 @@ const useAuthForm = (toggleSignIn, toggleSignUp) => {
             });
 
             localStorage.setItem("accessToken", response.data.accessToken);
-            localStorage.setItem("refreshToken", response.data.refreshToken);
+            localStorage.setItem("remember_token", response.data.remember_token);
 
             setAccessToken(response.data.accessToken);
 

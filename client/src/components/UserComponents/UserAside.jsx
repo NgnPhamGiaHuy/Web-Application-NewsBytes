@@ -24,10 +24,10 @@ const UserAside = ({ isHeaderVisible, userProps }) => {
                     <div className={`flex flex-col ${isHeaderVisible ? "min-h-[calc(-57px+100vh)]" : "min-h-[calc(-0px+100vh)]"}`}>
                         <div className="flex-grow flex-shrink-0 basis-auto">
                             <div className="mt-10">
-                                { userProps && <UserAsideInfo {...userProps} /> }
+                                {userProps && <UserAsideInfo {...userProps} />}
                                 <div>
-                                    { userFollowing && <AsideBox title="Following" titleMarginBottom={16} linkMarginTop={16} linkLabel={`${ userFollowing?.length - 4 > 0 ? `See all (${userFollowing?.length - 4})` : "" }`} list={userFollowing} limit={4} RenderComponent={UserFollowingCard} /> }
-                                    { userList && <AsideBox title="Lists" titleMarginBottom={16} linkMarginTop={16} linkLabel="View All" list={userList} limit={3} RenderComponent={UserListCard} /> }
+                                    {userFollowing && userFollowing.length > 0 && <AsideBox title="Following" titleMarginBottom={16} linkMarginTop={16} linkLabel={`${userFollowing?.length - 4 > 0 ? `See all (${userFollowing?.length - 4})` : ""}`} list={userFollowing} limit={4} RenderComponent={UserFollowingCard} />}
+                                    {userList && userList.length > 0 && <AsideBox title="Lists" titleMarginBottom={16} linkMarginTop={16} linkLabel="View All" list={userList} limit={3} RenderComponent={UserListCard} />}
                                 </div>
                             </div>
                         </div>

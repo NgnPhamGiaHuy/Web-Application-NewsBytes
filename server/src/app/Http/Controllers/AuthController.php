@@ -80,11 +80,11 @@ class AuthController extends Controller
     public function refreshToken(Request $request)
     {
         $request->validate([
-            'refreshToken' => 'required|string',
+            'remember_token' => 'required|string',
         ]);
 
         try {
-            $tokens = $this->userService->refreshAccessToken($request->input('refreshToken'));
+            $tokens = $this->userService->refreshAccessToken($request->input('remember_token'));
 
             if (!$tokens) {
                 return response()->json(['message' => 'Invalid refresh token.'], 401);
@@ -92,7 +92,7 @@ class AuthController extends Controller
 
             return response()->json($tokens, 200);
         } catch (\Exception $e) {
-            Log::error('Error in refreshToken: ' . $e->getMessage());
+            Log::error('Error in remember_token: ' . $e->getMessage());
 
             return response()->json(['error' => 'Internal Server Error'], 500);
         }

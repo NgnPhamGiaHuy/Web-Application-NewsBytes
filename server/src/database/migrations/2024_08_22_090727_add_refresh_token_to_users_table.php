@@ -14,7 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('refreshToken')->nullable()->after('image_url');
+            if (!Schema::hasColumn('users', 'remember_token')) {
+                $table->string('remember_token')->nullable()->after('image_url');
+            }
         });
     }
 
@@ -26,7 +28,7 @@ return new class extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('refreshToken');
+            $table->dropColumn('remember_token');
         });
     }
 };

@@ -7,9 +7,6 @@ use App\Http\Controllers\NewsListController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\UserController;
 
-use App\Http\Middleware\Authenticate;
-use App\Http\Middleware\CheckRole;
-
 Route::post('/api/v1/auth/login', [AuthController::class, 'login']);
 Route::post('/api/v1/auth/logout', [AuthController::class, 'logout']);
 Route::post('/api/v1/auth/register', [AuthController::class, 'register']);

@@ -1,3 +1,4 @@
+import extractMonthAndDay from "@/utils/date/extractMonthAndDay";
 import formatLongDate from "@/utils/date/formatLongDate";
 
 import fetchDataWithAccessToken from "@/utils/fetch/fetchDataWithAccessToken";
@@ -21,7 +22,7 @@ import handleDecodeToken from "@/utils/token/handleDecodeToken";
 import getUserData from "@/utils/user/getUserData";
 
 export {
-    formatLongDate,
+    extractMonthAndDay, formatLongDate,
     fetchDataWithAccessToken, fetchDataWithAccessTokenAndData, fetchDataWithoutAccessToken, fetchTokenRefresh,
     fetcherWithAccessToken, fetcherWithoutAccessToken,
     sliceName,
